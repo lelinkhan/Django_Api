@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Api</title>
+</head>
+<body>
+    <center>
+        <h1>Create table from Api</h1>
+        <h4>Django rest framework</h4>
+        <hr>
+        <table border="1">
+            <tr>
+                <th>Invoice_ID</th>
+                <th>Branch</th>
+                <th>City</th>
+                <th>Customer_type</th>
+                <th>Gender</th>
+                <th>Product_line</th>
+                <th>Unit_price</th>
+                <th>Quantity</th>
+                <th>Tax</th>
+                <th>Total</th>
+                <th>OrderDate</th>
+                <th>Time</th>
+                <th>Payment</th>
+                <th>cogs</th>
+                <th>gross_margin_percentage</th>
+                <th>gross_income</th>
+                <th>Rating</th>
+            </tr>
+            {% for x in result %}
+                <tr>
+                    <td>{{x.Invoice_ID}}</td>
+                    <td>{{x.Branch}}</td>
+                    <td>{{x.City}}</td>
+                    <td>{{x.Customer_type}}</td>
+                    <td>{{x.Gender}}</td>
+                    <td>{{x.Product_line}}</td>
+                    <td>{{x.Unit_price}}</td>
+                    <td>{{x.Quantity}}</td>
+                    <td>{{x.Tax}}</td>
+                    <td>{{x.Total}}</td>
+                    <td>{{x.OrderDate}}</td>
+                    <td>{{x.Time}}</td>
+                    <td>{{x.Payment}}</td>
+                    <td>{{x.cogs}}</td>
+                    <td>{{x.gross_margin_percentage}}</td>
+                    <td>{{x.gross_income}}</td>
+                    <td>{{x.Rating}}</td>
+                </tr>
+            {% endfor %}
+
+        </table>
+    </center>
+</body>
+</html>
